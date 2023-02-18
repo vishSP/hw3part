@@ -1,5 +1,6 @@
 import unittest
 from main import *
+
 """тесты"""
 n1 = Node(5, None)
 n2 = Node('a', n1)
@@ -23,3 +24,15 @@ class TestMain(unittest.TestCase):
         self.assertEqual(stack.top.next_node.data, 'data2')
         self.assertEqual(stack.top.next_node.next_node.data, 'data1')
         self.assertEqual(stack.top.next_node.next_node.next_node, None)
+
+    def test_pop(self):
+        stack = Stack()
+        stack.push('data1')
+        self.assertEqual(stack.top, None)
+
+    def test_pop_another(self):
+        stack = Stack()
+        stack.push('data1')
+        stack.push('data2')
+
+        self.assertEqual(stack.top.data, 'data1')
