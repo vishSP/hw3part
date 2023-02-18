@@ -9,10 +9,9 @@ class Node:
         self.next_node = next_node
 
 
-"""Узел стак  """
-
-
 class Stack:
+    """Узел стак  """
+
     def __init__(self):
         self.top = None
 
@@ -22,3 +21,9 @@ class Stack:
         new_node = Node(data=value)
         new_node.next_node = self.top
         self.top = new_node
+
+    def pop(self):
+        """Удаление элемента из стака и вывод последнего аргумента"""
+        remove = self.top
+        self.top = self.top.next_node
+        return remove.data
