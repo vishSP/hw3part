@@ -15,9 +15,8 @@ class Stack:
     def __init__(self):
         self.top = None
 
-    """Добавление данных в стак"""
-
     def push(self, value):
+        """Добавление данных в стак"""
         new_node = Node(data=value)
         new_node.next_node = self.top
         self.top = new_node
