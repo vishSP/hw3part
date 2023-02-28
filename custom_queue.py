@@ -9,6 +9,7 @@ class Node:
 
 class Queue:
     """Узел Queue  """
+
     def __init__(self):
         self.head = None
         self.tail = None
@@ -24,4 +25,21 @@ class Queue:
             self.tail.next_node = node
             self.tail = node
 
+    def dequeue(self):
+        """убрать объекты из Queue"""
+        if self.head is None:
+            return None
+        else:
+            to_return = self.head.data
+            self.head = self.head.next_node
+            return to_return
 
+
+queue = Queue()
+queue.enqueue('data1')
+queue.enqueue('data2')
+queue.enqueue('data3')
+print(queue.dequeue())
+print(queue.dequeue())
+print(queue.dequeue())
+print(queue.dequeue())
