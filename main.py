@@ -1,16 +1,16 @@
 from collections import deque
 
-"""Узел нод для с двумя атрибутами"""
-
 
 class Node:
+    """Узел нод для с двумя атрибутами"""
+
     def __init__(self, data=None, next_node=None):
         self.data = data
         self.next_node = next_node
 
 
 class Stack:
-    """Узел стак  """
+    """Узел стак """
 
     def __init__(self):
         self.top = None
